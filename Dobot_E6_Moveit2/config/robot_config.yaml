@@ -1,0 +1,89 @@
+# Robot Configuration
+robot:
+  ip: "192.168.5.1"
+  dashboard_port: 29999
+  motion_port: 30003
+
+# Suction gripper
+gripper:
+  do_index: 1  # Digital Output index for suction
+  grip_wait_time: 0.5  # seconds to wait after grip
+  release_wait_time: 0.3  # seconds to wait after release
+
+# Predefined positions (x, y, z, rx, ry, rz)
+# All positions in mm and degrees
+positions:
+  home:
+    x: 300
+    y: 0
+    z: 300
+    rx: 180
+    ry: 0
+    rz: 0
+    
+  pick_approach_height: 150  # Height above pick position for approach
+  place_approach_height: 150  # Height above place position for approach
+  
+  # Pick positions - Add your object locations here
+  pick_locations:
+    object_1:
+      x: 300
+      y: 200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+      
+    object_2:
+      x: 350
+      y: 200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+      
+    object_3:
+      x: 400
+      y: 200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+  
+  # Place positions - Add your drop locations here
+  place_locations:
+    destination_1:
+      x: 300
+      y: -200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+      
+    destination_2:
+      x: 350
+      y: -200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+      
+    destination_3:
+      x: 400
+      y: -200
+      z: 50
+      rx: 180
+      ry: 0
+      rz: 0
+
+# Movement parameters
+movement:
+  default_velocity: 50.0  # percentage (0-100)
+  approach_velocity: 30.0  # slower for approach
+  retreat_velocity: 50.0
+  
+# Safety limits
+safety:
+  max_z: 600  # maximum Z height
+  min_z: 0    # minimum Z height (table level)
+  workspace_radius: 800  # maximum reach in XY plane

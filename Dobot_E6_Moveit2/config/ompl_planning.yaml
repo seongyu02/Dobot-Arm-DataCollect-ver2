@@ -1,0 +1,12 @@
+planning_plugin: ompl_interface/OMPLPlanner
+planning_plugins:
+  - ompl_interface/OMPLPlanner
+
+arm:
+  planner_configs:
+    - RRTConnect
+    - RRT
+    - RRTstar
+    - BKPIECE
+  projection_evaluator: joints(joint1,joint2)
+  longest_valid_segment_fraction: 0.005

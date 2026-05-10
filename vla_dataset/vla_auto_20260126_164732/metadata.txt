@@ -1,0 +1,14 @@
+VLA Dataset - Auto Collection
+======================================================================
+
+Session: vla_auto_20260126_164732
+Date: 2026-01-26 16:49:45
+Total Frames: 158
+Robot IP: 192.168.5.1
+Calibration: hikrobot_calibration_20260126_143821.npz
+Image Resolution: 640x480
+
+Data Collection Method: Teaching Log Replay
+- Teaching log를 자동 재생하면서 촬영
+- 각 포인트에서 로봇 정지 후 이미지 캡처
+- 정확한 타임스텝 동기화 보장

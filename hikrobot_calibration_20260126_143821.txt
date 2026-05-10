@@ -1,0 +1,16 @@
+HIKRobot MV-CE050-30UC Camera Calibration Results
+======================================================================
+
+Timestamp: 2026-01-26 14:38:21
+Chessboard Size: 3x3
+Square Size: 30.0 mm
+Number of Images: 17
+RMS Reprojection Error: 0.0536 pixels
+
+Camera Matrix:
+[[1.33279832e+03 0.00000000e+00 1.71157536e+02]
+ [0.00000000e+00 1.30973072e+03 2.39813809e+02]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
+
+Distortion Coefficients:
+[-0.08017502  0.33703404  0.02191772 -0.02902293 -1.96653809]
