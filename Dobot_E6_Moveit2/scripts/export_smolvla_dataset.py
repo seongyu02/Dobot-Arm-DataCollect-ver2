@@ -17,6 +17,9 @@ import argparse
 import csv
 import json
 import math
+import shutil
+import subprocess
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -250,20 +253,76 @@ def _encode_episode_video(image_paths: Sequence[Optional[Path]], out_path: Path,
     if first is None:
         return {"frames_input": len(valid_paths), "frames_written": 0}
     height, width = first.shape[:2]
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    writer = cv2.VideoWriter(str(out_path), fourcc, float(max(1, fps)), (width, height))
+    fps = int(max(1, fps))
 
-    written = 0
-    for image_path in valid_paths:
-        frame = cv2.imread(str(image_path))
-        if frame is None:
+    # Prefer MP4-compatible codecs first; fallback to others only if needed.
+    codec_candidates = ["mp4v", "avc1", "H264"]
+    for codec in codec_candidates:
+        fourcc = cv2.VideoWriter_fourcc(*codec)
+        writer = cv2.VideoWriter(str(out_path), fourcc, float(fps), (width, height))
+        if not writer.isOpened():
+            writer.release()
             continue
-        if frame.shape[:2] != (height, width):
-            frame = cv2.resize(frame, (width, height))
-        writer.write(frame)
-        written += 1
-    writer.release()
-    return {"frames_input": len(valid_paths), "frames_written": written}
+
+        written = 0
+        for image_path in valid_paths:
+            frame = cv2.imread(str(image_path))
+            if frame is None:
+                continue
+            if frame.shape[:2] != (height, width):
+                frame = cv2.resize(frame, (width, height))
+            writer.write(frame)
+            written += 1
+        writer.release()
+
+        # Some OpenCV builds report success but leave an empty file.
+        if written > 0 and out_path.exists() and out_path.stat().st_size > 0:
+            return {"frames_input": len(valid_paths), "frames_written": written}
+        try:
+            out_path.unlink(missing_ok=True)
+        except Exception:
+            pass
+
+    # Final fallback: ffmpeg image concat -> mp4 (if available in PATH).
+    ffmpeg_bin = shutil.which("ffmpeg")
+    if ffmpeg_bin:
+        try:
+            with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as tf:
+                list_path = Path(tf.name)
+                for image_path in valid_paths:
+                    escaped_path = str(image_path).replace("'", "'\\''")
+                    tf.write("file '" + escaped_path + "'\n")
+
+            cmd = [
+                ffmpeg_bin,
+                "-y",
+                "-hide_banner",
+                "-loglevel",
+                "error",
+                "-f",
+                "concat",
+                "-safe",
+                "0",
+                "-r",
+                str(fps),
+                "-i",
+                str(list_path),
+                "-pix_fmt",
+                "yuv420p",
+                str(out_path),
+            ]
+            proc = subprocess.run(cmd, check=False)
+            if proc.returncode == 0 and out_path.exists() and out_path.stat().st_size > 0:
+                return {"frames_input": len(valid_paths), "frames_written": len(valid_paths)}
+        except Exception:
+            pass
+        finally:
+            try:
+                list_path.unlink(missing_ok=True)
+            except Exception:
+                pass
+
+    return {"frames_input": len(valid_paths), "frames_written": 0}
 
 
 def _write_json(path: Path, data: Dict):

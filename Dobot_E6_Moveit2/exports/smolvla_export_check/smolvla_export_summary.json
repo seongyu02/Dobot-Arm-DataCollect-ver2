@@ -1,7 +1,0 @@
-{
-  "dataset_root": "C:\\Dobot-Arm-DataCollect-ver2\\vla_dataset_smolvla",
-  "output_jsonl": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\smolvla_export_check\\smolvla_frames.jsonl",
-  "episodes_exported": 0,
-  "frames_exported": 0,
-  "episodes_skipped": 0
-}

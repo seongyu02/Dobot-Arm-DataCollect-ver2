@@ -1,17 +1,56 @@
 {
-  "dataset_root": "C:\\Dobot-Arm-DataCollect-ver2\\vla_dataset",
-  "output_root": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace",
-  "episodes_exported": 2,
+  "dataset_root": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/vla_dataset",
+  "output_root": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace",
+  "episodes_exported": 6,
   "episodes_skipped": 0,
-  "frames_exported": 304,
-  "parquet_written": 2,
-  "tasks_written": 1,
+  "frames_exported": 1115,
+  "parquet_written": 6,
+  "tasks_written": 2,
   "quality_rows": [
     {
-      "episode_name": "vla_auto_20260126_164732",
+      "episode_name": "1",
       "episode_index": 0,
       "status": "ok",
-      "parquet_path": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\data\\chunk-000\\episode_000000.parquet",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000000.parquet",
+      "csv_rows": 212,
+      "obs1_images": 212,
+      "obs2_images": 0,
+      "obs1_missing_in_rows": 0,
+      "obs2_missing_in_rows": 212,
+      "top_video_frames_written": 212,
+      "side_video_frames_written": 0
+    },
+    {
+      "episode_name": "2",
+      "episode_index": 1,
+      "status": "ok",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000001.parquet",
+      "csv_rows": 235,
+      "obs1_images": 235,
+      "obs2_images": 0,
+      "obs1_missing_in_rows": 0,
+      "obs2_missing_in_rows": 235,
+      "top_video_frames_written": 235,
+      "side_video_frames_written": 0
+    },
+    {
+      "episode_name": "3",
+      "episode_index": 2,
+      "status": "ok",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000002.parquet",
+      "csv_rows": 218,
+      "obs1_images": 218,
+      "obs2_images": 0,
+      "obs1_missing_in_rows": 0,
+      "obs2_missing_in_rows": 218,
+      "top_video_frames_written": 218,
+      "side_video_frames_written": 0
+    },
+    {
+      "episode_name": "vla_auto_20260126_164732",
+      "episode_index": 3,
+      "status": "ok",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000003.parquet",
       "csv_rows": 158,
       "obs1_images": 0,
       "obs2_images": 0,
@@ -22,9 +61,22 @@
     },
     {
       "episode_name": "vla_auto_20260126_171336",
-      "episode_index": 1,
+      "episode_index": 4,
       "status": "ok",
-      "parquet_path": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\data\\chunk-000\\episode_000001.parquet",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000004.parquet",
+      "csv_rows": 146,
+      "obs1_images": 0,
+      "obs2_images": 0,
+      "obs1_missing_in_rows": 0,
+      "obs2_missing_in_rows": 146,
+      "top_video_frames_written": 146,
+      "side_video_frames_written": 0
+    },
+    {
+      "episode_name": "vla_auto_20260126_171806",
+      "episode_index": 5,
+      "status": "ok",
+      "parquet_path": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/data/chunk-000/episode_000005.parquet",
       "csv_rows": 146,
       "obs1_images": 0,
       "obs2_images": 0,
@@ -35,9 +87,9 @@
     }
   ],
   "artifacts": {
-    "info_json": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\meta\\info.json",
-    "stats_json": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\meta\\stats.json",
-    "episodes_jsonl": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\meta\\episodes.jsonl",
-    "tasks_jsonl": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace\\meta\\tasks.jsonl"
+    "info_json": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/meta/info.json",
+    "stats_json": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/meta/stats.json",
+    "episodes_jsonl": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/meta/episodes.jsonl",
+    "tasks_jsonl": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace/meta/tasks.jsonl"
   }
 }

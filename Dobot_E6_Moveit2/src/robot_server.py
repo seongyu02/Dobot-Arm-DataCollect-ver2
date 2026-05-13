@@ -113,8 +113,9 @@ from pick_place_gui_random_pose import (
 )
 
 # 데이터 저장 경로 — 외장 드라이브 마운트 확인 필요
-DATA_SAVE_DIR   = "/media/billye6/새 볼륨/Dobot/2CAM"
-DATA_DRIVE_ROOT = "/media/billye6/새 볼륨"   # 마운트 여부 판단 기준
+DATA_SAVE_DIR   = "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/vla_dataset"
+DATA_DRIVE_ROOT = "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2"
+
 from dobot_e6_controller import DobotE6Controller
 from suction_gripper import SuctionGripper
 

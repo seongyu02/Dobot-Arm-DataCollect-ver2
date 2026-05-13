@@ -1,0 +1,33 @@
+{
+  "task_name": "pick_only",
+  "object_label": "red_block",
+  "pick_section": "A",
+  "pick_x": 220.21,
+  "pick_y": -368.72,
+  "place_section": null,
+  "place_x": null,
+  "place_y": null,
+  "transport_direction": "pick_only",
+  "pick_only": true,
+  "success": true,
+  "folder": "3",
+  "date": "2026-05-13 19:21:04",
+  "total_frames": 218,
+  "record_rate_hz": 17.391,
+  "cameras": "OBS_IMAGE_1",
+  "camera_mapping": {
+    "OBS_IMAGE_1": "top",
+    "OBS_IMAGE_2": "side"
+  },
+  "camera_source": {
+    "OBS_IMAGE_1": "camera_1",
+    "OBS_IMAGE_2": "usb_camera_1"
+  },
+  "collection_policy": "manual",
+  "start_pose_id": "manual_default",
+  "global_success_count_after_episode": 2,
+  "per_pose_success_target": null,
+  "start_pose_success_count_after_episode": null,
+  "vacuum_pick_duration_s": 1.175,
+  "vacuum_place_duration_s": 0.0
+}

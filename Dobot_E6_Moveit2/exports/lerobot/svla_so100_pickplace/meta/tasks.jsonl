@@ -1,1 +1,2 @@
-{"task_index": 0, "task": "Pick and place the target object."}
+{"task_index": 0, "task": "pick_only"}
+{"task_index": 1, "task": "Pick and place the target object."}

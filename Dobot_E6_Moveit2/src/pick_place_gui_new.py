@@ -257,7 +257,7 @@ RED_SEARCH_X_STEP = -50.0         # 한 번에 이동할 X- 스텝(mm)
 RED_SEARCH_MAX_STEPS = 4          # 최대 시도 횟수
 RED_DETECT_MIN_AREA = 500         # 빨간 블록 감지용 최소 픽셀 수 (튜닝 가능)
 
-RELEASE_Z = 101.7   # 그리퍼 해제/픽 높이 (실측 기준 Z≈101.7에서 동작)
+RELEASE_Z = 122.7   # 그리퍼 해제/픽 높이 (물체 높이 변경 반영)
 RELEASE_Z_TOLERANCE_MM = 1.5   # Z 도달 판정 허용 오차 (대략 100.2~103.2)
 PLACE_WAIT_AT_101_S = 2.0   # Place 시 Z 도달 후 release 전 대기 시간(초)
 Z_MOVE_MIN, Z_MOVE_MAX = 150.0, 300.0   # Pick/Place 후 궤적용 Z 랜덤 범위 (최소 150~최대 300)

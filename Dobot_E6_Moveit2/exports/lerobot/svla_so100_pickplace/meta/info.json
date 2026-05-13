@@ -1,11 +1,11 @@
 {
   "dataset_name": "svla_so100_pickplace",
-  "dataset_root": "C:\\Dobot-Arm-DataCollect-ver2\\vla_dataset",
-  "output_root": "C:\\Dobot-Arm-DataCollect-ver2\\Dobot_E6_Moveit2\\exports\\lerobot\\svla_so100_pickplace",
+  "dataset_root": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/vla_dataset",
+  "output_root": "/home/billy/seongyu/Dobot-Arm-DataCollect-ver2/Dobot_E6_Moveit2/exports/lerobot/svla_so100_pickplace",
   "robot_type": "dobot_e6",
   "fps": 20,
-  "episodes_exported": 2,
-  "frames_exported": 304,
+  "episodes_exported": 6,
+  "frames_exported": 1115,
   "feature_schema": {
     "frame_index": "int32",
     "timestamp": "float64",

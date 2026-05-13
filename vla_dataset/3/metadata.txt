@@ -1,0 +1,11 @@
+VLA Dataset - Pick-Place Step
+==================================================
+
+Folder: 3
+Date: 2026-05-13 19:21:04
+Total Frames: 218
+Record Rate: 17.391Hz
+Cameras: OBS_IMAGE_1(top)
+Step Success: True
+VacuumCommandPickDuration_s: 1.175
+VacuumCommandPlaceDuration_s: 0.000
